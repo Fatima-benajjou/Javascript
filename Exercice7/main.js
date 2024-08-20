@@ -15,12 +15,13 @@
 // Fin du compte !
 
 let i =1;
-
+console.log("Je commence à compter")
 for (i; i<11;i++){
-    console.log(+i)
+    console.log(i)
 }
 
 while(i<11){
-    console.log(+i)
+    console.log(i)
     i++
 }
+console.log("Fin de compte")
