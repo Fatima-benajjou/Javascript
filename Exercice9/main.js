@@ -45,7 +45,7 @@
 //    N  2N  3N  .....
 
 
-let nbr=Number(prompt("Entrez un chiffre"))
+let nbr=parseInt(prompt("Entrez un chiffre"))
 
 
 for (let i = 1;i <= 10;i++){
