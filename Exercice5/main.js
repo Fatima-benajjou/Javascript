@@ -11,8 +11,6 @@ let temp = Number(prompt("entrez une température"))
 
 if (temp < 0) {
     alert("l'eau est à l'état solide")
-} else if (temp >0 && temp<=100) {
+} else if (temp<=100) {
     alert("l'eau est à l'état liquide ")
-} else if (temp>100) { 
-    alert("l'eau est à l'état gazeux")
-} else alert ("saisie incorrecte, entrez un chiffre")
+} else alert ("l'eau est à l'état gazeux")
