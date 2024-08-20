@@ -30,5 +30,5 @@ while (populationInitiale < populationVisee) {
     nbr_annee++;
 }
 
-console.log("La population visée sera atteinte en " + nbr_annee + " périodes.");
+console.log("La population visée sera atteinte en " + nbr_annee + " années.");
 alert("La population visée sera atteinte en " + nbr_annee + " années.");

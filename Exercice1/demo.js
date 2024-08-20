@@ -154,6 +154,8 @@ console.log("Egalite '3' === 3 ", "3" === 3); // false
 // operateurs logique
 
 // ET
+
+
 console.log("Vrai ET Vrai ",true && true) // true
 console.log("Vrai ET Faux ",true && false) // false
 console.log("Faux ET Faux ",false && false) // false
@@ -166,3 +168,85 @@ console.log("Faux OU Faux ",false || false) // false
 // NON
 console.log("NON Vrai",!true) //false
 console.log("NON False",!false) // true
+
+//Fonction
+
+function sayHello() {
+    alert("Hello World")
+}
+
+sayHello(); // Appel la fonction
+console.log(sayHello) //affiche les propriété de la fonction sayhello
+console.log(sayHello()) //appel la fonction et affiche son retour
+
+// Parametre et arguments
+
+function sayHelloToSomeone (name) {
+    alert("Bonjour " +name)
+}
+
+sayHelloToSomeone("Fatima");
+let myName="tata";
+sayHelloToSomeone(myName);
+
+//Parametre par défaut
+
+function sayMessage(from, message="aucun texte") { // le parametre message devient facultatif il a une valeur par defaut
+    alert(`${from}: ${message}`)
+}
+sayMessage("Tata","bonjour !!")
+sayMessage("tataaaa") //tataaaa : aucun texte
+
+//retourne un resultat
+
+function premiereLettre(mot){
+    return mot.charAt(0) //CharAt vient cherche la ènieme lettre du mot, ici la 1er lettre à l'index 0
+
+}
+
+console.log(premiereLettre("Bonjour"));
+
+
+function sum(a,b) {
+    return a+b;
+}
+console.log(sum(1,2));
+console.log(sum("du ","texte")) ;// il va venir concatener
+
+// fonction anonyme, fléchées (ou lamba, delegates)
+
+let Hello = function () {
+    alert ("hello !!!")
+}
+
+Hello();
+
+// fonction fléchée
+
+let sayHi= () =>alert("hello from sayHi!!!");
+
+sayHi();
+
+const sayHi2 =(name) => {
+    let message = "Bonjour" +name;
+    return message;
+}
+
+console.log(sayHi2("Fatima"))
+
+//CallBack
+
+ function salutations(name) {
+    alert("Bonjour " +name)
+ }
+
+ function processeUserInput(callBack) {
+    let name = prompt("Entrez votre nom ");
+    callBack(name) ;
+ }
+
+ processeUserInput(salutations);
+ processeUserInput(alert);
+ processeUserInput(console.log);
+
+ 
