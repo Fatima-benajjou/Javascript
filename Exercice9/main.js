@@ -45,10 +45,9 @@
 //    N  2N  3N  .....
 
 
-let nbr=parseInt(prompt("Entrez un chiffre"))
+let nbr=Number(prompt("Entrez un chiffre"))
 
 
 for (let i = 1;i <= 10;i++){
-    console.log(nbr+ " x " +i+" = "+(i*nbr));
+    console.log(i+" x "+nbr+" = "+(i*nbr));
 }
-
