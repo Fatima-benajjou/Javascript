@@ -47,7 +47,9 @@
 
 let nbr=Number(prompt("Entrez un chiffre"))
 
-
+for (let table = 1; table <=nbr; table ++){
+    console.log("table de "+table)
 for (let i = 1;i <= 10;i++){
-    console.log(i+" x "+nbr+" = "+(i*nbr));
+    console.log(i+" x "+table+" = "+(i*table));
+}
 }
