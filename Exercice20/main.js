@@ -23,7 +23,8 @@
 let tab =[];
 
 for (let i =0; i< 10; i++) {
-    tab[i] =(prompt("veuillez saisir une valeur"));
+    tab[i] =parseInt(prompt("veuillez saisir une valeur")); // saisie utilsiateur
+    tab[i] = (Math.random() *100).toFixed(0) // aléatoire
     
 }
 

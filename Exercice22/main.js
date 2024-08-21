@@ -13,72 +13,54 @@
 // 1 : Saisie fixe
 // 2 : Saisie jusqu'à note négative 
 
-let note =[]
-let choix = Number(prompt("Faites un choix:  1 : saisie fixe ou 2 : saisie nagative possible"))
-
-switch (choix) {
-    case "1":
-        alert("Vous avez choisi la saisie fixe")
-        saisieFixe()
-        break;
-
-    case "2" :
-        alert("Vous avez choisi la saisie negative possible")    
-        break;
-}
 
 
-// Votre choix : 1
 
-// Combien de notes ? 5
+function menu() {
+    let notes = [];
+    let modeSaisie = parseInt(prompt("Choisir un mode de saisie:\n1 : Saisie fixe\n2 : Saisie negative possible"));
 
-function saisieFixe () {
-    let tab = []
-    let nbNotes = Number(prompt("Combien de notes voulez-vous saisir ?"))
-
-if(nbNotes >0) {
-    for (let i=0; i < nbNotes; i++) {
-        let saisie= Number(prompt("Veuillez saisir une note"))
-        tab.push(saisie)
+    switch (modeSaisie) {
+        case 1:
+          
+            let nbDeNotes = parseInt(prompt("Combien de notes voulez-vous saisir ?"));
+            console.log("Entrez les notes");
+            for (let i = 0; i < nbDeNote; i++) {
+                let note = recupNote();
+                notes.push(note);
+            }
+            break;
+        case 2:
+          
+            console.log("Entrez les notes");
+            while (true) {
+                let note = parseFloat(prompt("Veuillez entrer une note entre 0 et 20 compris :"));
+                if (note < 0) {
+                    break;
+                } else if (note >= 0 && note <= 20) {
+                    notes.push(note);
+                } else {
+                    console.log("saisie incorrecte, recommencez:");
+                }
+            }
+            break;
+        default:
+            console.log("Choix non valide !");
+            return;
     }
-}else prompt("Saisie incorrecte, combien de notes voulez vous saisir")
 }
 
 
+function recupNote() {
+    let note;
+    do {
+        note = parseFloat(prompt("Veuillez entrer une note entre 0 et 20 compris :"));
+        if (note < 0 || note > 20) {
+            console.log("Veuillez saisir une note compris entre 0 et 20, recommencez");
+        }
+    } while (note < 0 || note > 20);
+    return note;
+}
 
+menu();
 
-// Début de Saisie !
-// Veuillez entrer une note entre 0 et 20 compris : 12
-// Veuillez entrer une note entre 0 et 20 compris : 0
-// Veuillez entrer une note entre 0 et 20 compris : 20
-// Veuillez entrer une note entre 0 et 20 compris : 300
-// ERREUR, veuillez réessayer : 10
-// Veuillez entrer une note entre 0 et 20 compris : 13
-// Fin de Saisie !
-
-// La note maximale est de 20.00 / 20
-// La note minimale est de 0.00 / 20
-// La moyenne est de 11.0 / 20
-// ```
-
-
-// ```
-// Choisir un mode de saisie:
-// 1 : Saisie fixe
-// 2 : Saisie jusqu'à note négative 
-
-// Votre choix : 2
-
-// Veuillez entrer une note entre 0 et 20 compris : 12
-// Veuillez entrer une note entre 0 et 20 compris : 0
-// Veuillez entrer une note entre 0 et 20 compris : 20
-// Veuillez entrer une note entre 0 et 20 compris : 300
-// ERREUR, veuillez réessayer : 10
-// Veuillez entrer une note entre 0 et 20 compris : 13
-// Veuillez entrer une note entre 0 et 20 compris : -1
-// Fin de Saisie !
-
-// La note maximale est de 20.00 / 20
-// La note minimale est de 0.00 / 20
-// La moyenne est de 11.0 / 20
-// ```
