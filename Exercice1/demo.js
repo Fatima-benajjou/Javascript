@@ -249,4 +249,67 @@ console.log(sayHi2("Fatima"))
  processeUserInput(alert);
  processeUserInput(console.log);
 
- 
+ // kes tableaux
+
+ //let tab = [];
+ //let tab = Array();
+
+ let tab = ["Pomme","Banane",true,1,0.5,false]
+ console.log(tab)
+ console.table(tab)
+
+ tab.pop() // retire le dernier élément du tabkeau
+ console.table(tab)
+
+ tab.shift() //retire le 1er élément
+ console.table(tab)
+
+ //remplacer l'élement à l'indice 2
+ tab[2]=false //remplace l'élement à lindice 2 par la valeur false
+ console.table(tab)
+
+ //ajouter un element à un indice non existant
+ tab[15] ="Fraise"
+ console.table(tab)
+
+ console.table("l'element à l'indice 10 est" +tab[10]) //va nous afficher la valeur undefinied
+
+ console.table(tab.indexOf("Banane")) //premier trouvé qui correspond à banane
+ console.table(tab.lastIndexOf("Banane")) // si il a plusieurs fois la valeur banane, il prendra la derniere du tableau
+
+
+ //découper un tableau
+
+console.table(tab.splice(2,5)) //affiche ce qui va être supprimer à partir de l'élement 2 jusqu'au 5 suivant
+console.table(tab) //affiche le resultat une fois les élément supprimer par le slice
+
+//supprimer une valeur 
+delete tab[1]
+console.table(tab)
+
+// re-indexer le tableau, filtrer
+console.table(tab.filter(val => val)) // ne va garder que les lignes du tableau qui contienne une valeur
+
+let tab1 =["Pomme", "Banane",42, true, false,0.5,"Banane"]
+//copier un tableau
+let tab2 = [...tab1] //2 tableaux distincts
+
+let tab3 = tab1; // attention içi c'est le même tableau dans 2 variables différente
+
+tab1.push("toto")
+
+console.log("tab1 : ")
+console.table(tab1)
+console.log("tab2 : ")
+console.table(tab2)
+console.log("tab3 : ")
+console.table(tab3)
+
+tab1 = ["pomme", "orange","banane","ananas"]
+
+//forEach
+tab1.forEach((item,index) => console.log(+item+ " " +index))
+
+//map
+let newTab = tab1.map(val => val.toUpperCase());
+console.table(newTab)

@@ -23,13 +23,13 @@
 
 
 let ask = (question, yes, no) => {
-    if (confirm(question)) // affiche une boite de dialogue avec la possibilité d'accepter ou refuser
+    if (confirm(question)) 
         yes();
     else 
         no();
 };
 
-// Appel de la fonction ask avec des fonctions fléchées en arguments
+
 ask(
     "Do you agree?",
     () => alert("You agreed."),
