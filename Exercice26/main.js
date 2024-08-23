@@ -25,7 +25,7 @@ const dogDisplay = document.getElementById('selectOutput')
 
  const selectUpdate = () => {
     console.log(dogs);
-    // dogSelect.innerHTML="<option value=\"0\">Sélectionnez un chien</option>"
+    dogSelect.innerHTML="<option value=\"0\">Sélectionnez un chien</option>"
     for (let i =1; i <= dogs.length; i++) {
     const option = document.createElement('option');
            option.value = i; console.log(option)
@@ -39,12 +39,24 @@ const dogDisplay = document.getElementById('selectOutput')
  dogSelect.addEventListener("change", () => {
     const selectedDogList = dogSelect.value
     const selectedDog = dogs[selectedDogList]
+ 
 
-    if (selectedDog) {
-                    dogDisplay.textContent = `Nom: ${selectedDog.nom}, Âge: ${selectedDog.age}, Race: ${selectedDog.race}`;
+    if (selectedDogList >=0 ) {
+                    dogDisplay.textContent = `Nom: ${selectedDog.nom}, age: ${selectedDog.age}, Race: ${selectedDog.race}`;
                 } else {
                     dogDisplay.textContent = 'Sélectionnez un chien pour voir les détails.';
                 }
             });
 
             
+
+            // dogSelect.addEventListener("change", () => {
+            //     const selectedDogList = dogSelect.value
+            //     const selectedDog = dogs[selectedDogList]
+            
+            //     if (selectedDog != null) {
+            //                     dogDisplay.textContent = `Nom: ${selectedDog.nom}, Âge: ${selectedDog.age}, Race: ${selectedDog.race}`;
+            //                 } else {
+            //                     dogDisplay.textContent = 'Sélectionnez un chien pour voir les détails.';
+            //                 }
+            //             });
