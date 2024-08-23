@@ -313,3 +313,29 @@ tab1.forEach((item,index) => console.log(+item+ " " +index))
 //map
 let newTab = tab1.map(val => val.toUpperCase());
 console.table(newTab)
+
+
+// création d'objets
+
+const monObjet ={
+    firstName: "John",
+    lastName: "Doe"
+};
+
+//Parcourir un objet
+
+for (const key in monObjet) {
+    console.log(+key+ " : " +monObjet[key])
+}
+
+const maCle = prompt("Quelle clé ?")
+console.log(monObjet.maCle) // Attention içi c'est non dynamique, la clé doit etre explicitement codée
+console.log(monObjet[maCle]) // içi c'est dynamique, il recuperera le nom de la clé saisie par l'utilisateur dans le prompt
+
+let otherObj ={
+    a:1,
+    b:2,
+    c:3,
+}
+
+console.log(otherObj)

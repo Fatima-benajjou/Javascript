@@ -25,7 +25,7 @@ function menu() {
           
             let nbDeNotes = parseInt(prompt("Combien de notes voulez-vous saisir ?"));
             console.log("Entrez les notes");
-            for (let i = 0; i < nbDeNote; i++) {
+            for (let i = 0; i < nbDeNotes; i++) {
                 let note = recupNote();
                 notes.push(note);
             }
@@ -54,7 +54,7 @@ function menu() {
 function recupNote() {
     let note;
     do {
-        note = parseFloat(prompt("Veuillez entrer une note entre 0 et 20 compris :"));
+        note = parseFloat(prompt("Veuillez entrer une note entre 0 et 20 :"));
         if (note < 0 || note > 20) {
             console.log("Veuillez saisir une note compris entre 0 et 20, recommencez");
         }
